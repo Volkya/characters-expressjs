@@ -9,7 +9,8 @@ const Character = require('../models/Character');
 
 // rutas static
 router.get('/', async(req, res) => {
-    res.render('index');
+    const images = await Character.find();
+    res.render('index', {images});
 })
 
 
@@ -33,6 +34,25 @@ router.post('/upload', async (req, res) => {
     res.redirect('/');
     
 });
+
+
+router.get('/character/:id', async (req, res) => {
+    const {id} = req.params;
+    const image = await Character.findById(id);
+    res.render('detalle', {image});
+})
+
+
+router.get('/character/:id/delete', async (req, res) => {
+    const {id} = req.params;
+    const characterDeleted = await Character.findByIdAndDelete(id);
+    await unlink(path.resolve('./src/public' + characterDeleted.path));
+    res.redirect('/');
+});
+
+routes.post('/search', async (req, res) => {
+    
+})
 
 
 module.exports = router;

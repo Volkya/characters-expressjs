@@ -10,17 +10,12 @@ We r using Nodejs for this full stack project
 | -------- | -------- |--------|--------|--------|--------|
 | Nodejs | Express | EJS | Mongodb | Virtual Machine | Volkya |
 
-Backoff: https://trello.com/b/7wuxhn5c/rol-docs
-
-### Modules
-
-Authentication, passport, mongoose, handlebars, nodejs, mongodb, javascript
 
 # Future updates
 
-- Chat rol
+- Save pictures characters
 
-# Environment
+# Environment 
 `PROD: url`
 `PORT`
 
