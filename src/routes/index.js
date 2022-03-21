@@ -50,7 +50,7 @@ router.get('/character/:id/delete', async (req, res) => {
     res.redirect('/');
 });
 
-routes.post('/search', async (req, res) => {
+router.post('/search', async (req, res) => {
     
 })
 
